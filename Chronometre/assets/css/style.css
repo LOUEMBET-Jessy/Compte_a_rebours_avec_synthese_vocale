@@ -1,0 +1,127 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,300;0,500;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("image3.webp");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    font-family: sans-serif;
+}
+
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    padding: 40px 80px;
+    border-radius: 10px;
+    position: relative;
+}
+
+    @keyframes textAnimation {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      
+      #title {
+        font-size: 60px;
+        font-family: Pacifico;
+      }
+
+#chrono{
+    margin: auto;
+    width: 100%;
+    border: 1px solid #999;
+    border-radius: 6px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+      
+#chrono span{
+    font-family: 'Dacing Script', cursive;
+    padding: 5px;
+}
+
+#buttons{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.retour{
+    
+    background-color: gray;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100px;
+    border: 0;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    cursor: pointer;
+    text-decoration: none;
+    
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+}
+.retour:hover{
+  background-color: aqua;
+  transform: scale(0.9);
+}
+
+button{
+    background-color: gray;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 31%;
+    border: 0;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+button:hover{
+    transform: scale(0.9);
+    background-color: aqua;
+}

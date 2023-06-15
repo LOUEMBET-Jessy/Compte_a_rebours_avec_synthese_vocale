@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronomètre</title>
+    <link rel="stylesheet" href="assets/css/style.css ">
+</head>
+<body>
+    <video id="background-video" autoplay loop muted>
+        <source src="emeritus2010111200021.mp4" type="video/mp4">
+        Votre navigateur ne prend pas en charge la balise vidéo.
+      </video>
+    <script src="assets/js/chrono.js"></script>
+    
+    <a href="file:///C:/Users/JESSY/Desktop/CoursDeJSL1/ProjetDeJavaScript/DevoirFinal/acceuil/index.html" class="retour">Retour</a>
+    
+    <div id="wrapper">
+
+        <h1 id="title">Chronomètre</h1><br>
+        <div id="chrono">
+            <span>0 h</span>:
+            <span>0 min</span>:
+            <span>0 s</span>:
+            <span>0 ms</span>
+        </div>
+        <div id="buttons">
+            <button id="reset" onclick="reset()" class="button">Reset</button>
+            <button id="stop" onclick="stop()" class="button">Stop</button>
+            <button id="start" onclick="start()" class="button">Démarrer</button><br>
+        </div>
+        
+    </div>
+
+</body>
+</html>

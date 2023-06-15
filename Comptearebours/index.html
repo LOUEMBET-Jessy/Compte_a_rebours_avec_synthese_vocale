@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Compte à rebours</title>
+</head>
+<body>
+        <script src="assets/js/app.js"></script>
+        <a href="file:///C:/Users/JESSY/Desktop/CoursDeJSL1/ProjetDeJavaScript/DevoirFinal/acceuil/index.html" class="retours">Retour</a>
+
+        <div id="wrapper">
+            <div id="title">Compteur de Moussavou</div> <br>
+            <div id="minuteur">
+                <div class="box">
+                    <div class="unite">Jours</div>
+                    <div id="jour"></div>
+                </div>
+
+                <div class="box">
+                    <div class="unite">Heures</div>
+                    <div id="heur"></div>
+                </div>
+
+                <div class="box">
+                    <div class="unite">Minutes</div>
+                    <div id="min"></div>
+                </div>
+
+                <div class="box">
+                    <div class="unite">Secondes</div>
+                    <div id="sec"></div>
+                </div>
+            </div>
+            
+            <form id="dateForm">
+                <div id="tousLesinputs">
+                    <label for="joursInput">Jours:</label>
+                    <input type="number" id="joursInput" min="0">
+                
+                    <label for="heuresInput">Heures:</label>
+                    <input type="number" id="heuresInput" min="0" max="23">
+                
+                    <label for="minutesInput">Minutes:</label>
+                    <input type="number" id="minutesInput" min="0" max="59">
+                
+                    <label for="secondesInput">Secondes:</label>
+                    <input type="number" id="secondesInput" min="0" max="59">
+                </div>
+            
+                <button type="submit">Commencer</button>
+              </form>
+              <select name="" id="voice"></select>
+              <select name="" id="language"></select>
+    </div>
+</body>
+        
+</html>
