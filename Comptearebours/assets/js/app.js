@@ -1,4 +1,54 @@
+
 document.addEventListener('DOMContentLoaded', function() {
+
+  //gestion de la video d'arriere plan
+var video = document.getElementById('myVideo');
+
+function playVideo() {
+  video.play();
+}
+
+function pauseVideo() {
+  video.pause();
+}
+
+function stopVideo() {
+  video.pause();
+  video.currentTime = 0;
+}
+
+video.addEventListener('play', function() {
+  console.log('Lecture de la vidéo démarrée');
+});
+
+video.addEventListener('pause', function() {
+  console.log('Lecture de la vidéo en pause');
+});
+
+video.addEventListener('ended', function() {
+  console.log('Lecture de la vidéo terminée');
+});
+
+// Mise en pose de la video
+pauseVideo(); // Mettre en pause la vidéo
+
+
+//ma boucle de bienvenue
+   // Vérifie la compatibilité avec la synthèse vocale
+   if ('speechSynthesis' in window) {
+    // Crée une instance de l'objet de synthèse vocale
+    var synthesis = window.speechSynthesis;
+
+    // Crée un objet SpeechSynthesisUtterance avec le texte à synthétiser
+    var utterance = new SpeechSynthesisUtterance("Bienvenue dans le compte a rebours !");
+
+    // Démarre la synthèse vocale
+    synthesis.speak(utterance);
+  } else {
+    console.log("La synthèse vocale n'est pas prise en charge par ce navigateur.");
+  }
+
+  
   // Mes bagages sur la synthèse vocale en js
   var synthesis = window.speechSynthesis;
   var selectVoice = document.getElementById('voice');
@@ -65,9 +115,76 @@ document.addEventListener('DOMContentLoaded', function() {
     minutesEl.textContent = nbMinutes;
     secondesEl.textContent = nbSecondes;
 
-    if (tempsRestantMs < 10000) {
-      secondesEl.style.color = 'red';
+
+    
+    //Decompte 4
+    if (tempsRestantMs < 6000 && tempsRestantMs > 5900) {
+            //ma boucle de bienvenue
+        // Vérifie la compatibilité avec la synthèse vocale
+        if ('speechSynthesis' in window) {
+          // Crée une instance de l'objet de synthèse vocale
+          var synthesis = window.speechSynthesis;
+
+          // Crée un objet SpeechSynthesisUtterance avec le texte à synthétiser
+          var utterance = new SpeechSynthesisUtterance("4");
+
+          // Démarre la synthèse vocale
+          synthesis.speak(utterance);
+        } else {
+          console.log("La synthèse vocale n'est pas prise en charge par ce navigateur.");
+        }
     }
+        //Decompte 3
+        if (tempsRestantMs < 5000 && tempsRestantMs > 4900) {
+          //ma boucle de bienvenue
+      // Vérifie la compatibilité avec la synthèse vocale
+      if ('speechSynthesis' in window) {
+        // Crée une instance de l'objet de synthèse vocale
+        var synthesis = window.speechSynthesis;
+
+        // Crée un objet SpeechSynthesisUtterance avec le texte à synthétiser
+        var utterance = new SpeechSynthesisUtterance("3");
+
+        // Démarre la synthèse vocale
+        synthesis.speak(utterance);
+      } else {
+        console.log("La synthèse vocale n'est pas prise en charge par ce navigateur.");
+      }
+  }
+      //Decompte 2
+      if (tempsRestantMs < 4000 && tempsRestantMs > 3900) {
+        //ma boucle de bienvenue
+    // Vérifie la compatibilité avec la synthèse vocale
+    if ('speechSynthesis' in window) {
+      // Crée une instance de l'objet de synthèse vocale
+      var synthesis = window.speechSynthesis;
+
+      // Crée un objet SpeechSynthesisUtterance avec le texte à synthétiser
+      var utterance = new SpeechSynthesisUtterance("2");
+
+      // Démarre la synthèse vocale
+      synthesis.speak(utterance);
+    } else {
+      console.log("La synthèse vocale n'est pas prise en charge par ce navigateur.");
+    }
+}
+    //Decompte 1
+    if (tempsRestantMs < 3000 && tempsRestantMs > 2900) {
+      //ma boucle de bienvenue
+  // Vérifie la compatibilité avec la synthèse vocale
+  if ('speechSynthesis' in window) {
+    // Crée une instance de l'objet de synthèse vocale
+    var synthesis = window.speechSynthesis;
+
+    // Crée un objet SpeechSynthesisUtterance avec le texte à synthétiser
+    var utterance = new SpeechSynthesisUtterance("1");
+
+    // Démarre la synthèse vocale
+    synthesis.speak(utterance);
+  } else {
+    console.log("La synthèse vocale n'est pas prise en charge par ce navigateur.");
+  }
+}
 
     if (tempsRestantMs <= 0) {
       clearInterval(countDownInterval);
@@ -76,6 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
       heuresEl.textContent = 0;
       minutesEl.textContent = 0;
       secondesEl.textContent = 0;
+      playVideo(); // Lancer la lecture de la vidéo
       titleEl.innerHTML = 'Bonne et heureuse Année !!! &#127881; &#127881;'; // Lecture à voix haute du titre
 
       // Récupérer la voix et la langue sélectionnées
@@ -88,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var synthesis = window.speechSynthesis;
 
         // Créer un objet SpeechSynthesisUtterance avec le texte à synthétiser
-        var utterance = new SpeechSynthesisUtterance("Compte à rebours terminé ! Veillez renseigner d'autres coordonnées et cliquez sur Actualiser pour relancer un nouveau décompte !");
+        var utterance = new SpeechSynthesisUtterance("Bonne et heureuse année a tousse !");
         
         // Récupérer la voix et la langue sélectionnées
         var selectedVoice = synthesis.getVoices()[selectedVoiceIndex];

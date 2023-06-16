@@ -1,7 +1,0 @@
-ImageJoker1 = https://cdn.pixabay.com/photo/2023/02/24/05/43/joker-7810248_1280.jpg
-
-PremierFont = https://cdn.pixabay.com/photo/2015/05/12/19/14/temps-764511_1280.jpg
-
-
-ImageJoker2 = https://cdn.pixabay.com/photo/2023/04/17/14/24/ai-generated-7932597_1280.jpg
-ImageJoker3 = https://cdn.pixabay.com/photo/2023/05/05/10/58/ai-generated-7972164_640.jpg
